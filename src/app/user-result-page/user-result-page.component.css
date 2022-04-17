@@ -1,0 +1,15 @@
+
+
+
+/* .user-image{
+    width: 10vw;
+    border-radius: %;
+} */
+.holder {
+  background-image: url("../../assets/hanan.png");
+  height: 20vh;
+  width: 20vh;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
