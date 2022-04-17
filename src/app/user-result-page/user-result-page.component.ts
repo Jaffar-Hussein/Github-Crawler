@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GitInfoService } from '../git-info.service';
+import { UserSkeleton } from '../user-skeleton';
 
 @Component({
   selector: 'app-user-result-page',
@@ -16,12 +17,14 @@ export class UserResultPageComponent implements OnInit {
   followers:number=0;
   following:number=0;
   publicRepositories:number = 0;
+  user:any;
+  users!:any;
 
-
-  constructor(private gitinfo:GitInfoService) { }
+  constructor(private gitinfo:GitInfoService) {}
   
   ngOnInit(): void {
-    // this.name,this.following,this.followers,this.publicRepositories = this.gitinfo.userSkeleton.name;
+    this.users = this.gitinfo.userSkeleton
+    console.log(this.users);
     
   }
 

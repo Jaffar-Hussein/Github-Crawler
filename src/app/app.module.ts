@@ -17,13 +17,15 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     UserResultPageComponent,
     NavigationBarComponent,
     RepositoriesComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
+
 
   ],
   providers: [],
