@@ -8,6 +8,7 @@
 .input-space{
     width:45vw;
     padding: 1rem;
+    display: block;
     border-radius: 10vw;
     position: relative;
     border-color: #0077B6;
@@ -33,4 +34,19 @@
 }
 .main{
     margin-top: -10vh;
+}
+.search-space{
+    position: relative;
+    width: 45vw;
+}
+.search-space button{
+    position: absolute;
+    background: transparent;
+    border: none;
+    right: 1vw;
+    top: 1vh;
+    
+}
+.search-image{
+    height: 5vh;
 }
