@@ -1,5 +1,7 @@
 
-
+.numbers{
+    color: #0077B6;
+}
 
 /* .user-image{
     width: 10vw;
@@ -7,9 +9,11 @@
 } */
 .holder {
   background-image: url("../../assets/hanan.png");
-  height: 20vh;
-  width: 20vh;
-
+  height: 30vh;
+  width: 30vh;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.text-muted{
+  color: #0096C7 !important;
 }
