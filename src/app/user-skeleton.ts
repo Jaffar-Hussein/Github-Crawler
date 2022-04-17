@@ -1,14 +1,5 @@
 export class UserSkeleton {
-    User: any = {
-        name: 'Hanan',
-        following: 0,
-        followers: 0,
-        public_repositories: 0,
-        bio: '',
-        image: '',
-        creationDate: Date,
-        location: '',
-        email: '',
-        hireable: '',
-    }
+   
+    constructor(public name:string,public following:number,public followers:number,public publicRepositories:number,public bio:string,
+        public image:string,public creationDate:string,public location:string,public email:string,public hireable:string,){}
 }
