@@ -17,14 +17,17 @@ export class UserResultPageComponent implements OnInit {
   followers:number=0;
   following:number=0;
   publicRepositories:number = 0;
-  user:any;
-  users!:any;
+  user:any=[];
+  users!: UserSkeleton
 
-  constructor(private gitinfo:GitInfoService) {}
+  constructor(private gitinfo:GitInfoService) {
+  
+  }
   
   ngOnInit(): void {
     this.users = this.gitinfo.userSkeleton
-    console.log(this.users);
+    this.user.push(this.users)
+    console.log(this.user);
     
   }
 
