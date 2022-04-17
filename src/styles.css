@@ -6,3 +6,10 @@
     font-family: 'Century Gothic';
     
 }
+.first-buttons{
+    width: 10vw;
+    border-color: #0096C7;
+    background-color: #0077B6;
+    box-shadow: none;
+    color:#E5E5E5;
+}
