@@ -18,7 +18,7 @@
         <p><span class="numbers">{{detail.following}}</span> Following</p>
         <p><span class="numbers">{{detail.publicRepositories}}</span> Public Repositories</p>
       </div>
-      <p class="text-muted mb-3">Member since <span>2018</span></p>
+      <p class="text-muted mb-3">Member since <span> {{detail.creationDate|date}}</span></p>
     </div>
   </div>
   <!-- Repositories Section -->
@@ -29,8 +29,11 @@
         <p class="repo-name h6"><span>{{repo.name}}</span> Project</p>
         <p>{{repo.description}}</p>
         <p class="text-muted">{{repo.htmlURL}}</p>
+        <p> Created {{repo.created_at|monthCounter}}</p>
+
       </div>
-     
+      <p class="viewer text-decoration-underline"><a href={{repo.htmlURL}} target="_blank" class="link_user">VIEW</a>
+
       <div class="d-flex justify-content-around">
         <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.forks}}</span> Forks</p>
         <p class="repo-info text-center h-5 p-3 mx-5"><span>{{repo.watchers}}</span> Watchers</p>
