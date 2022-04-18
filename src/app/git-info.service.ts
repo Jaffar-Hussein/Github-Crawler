@@ -3,6 +3,7 @@ import { HttpProcessorService } from './http-processor.service'
 import { UserSkeleton } from './user-skeleton';
 import { RepositorySkeleton } from './repository-skeleton';
 import { UserRepo } from './user-repo';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -50,13 +51,16 @@ export class GitInfoService {
     this.HttpProcessor.fetchApi(url).subscribe((response) => {
       console.log(response)
       let allReposList: any;
-      response.map((res: any) => {
-        allReposList = new RepositorySkeleton(res.name, res.description, res.homepage, res.stargazers_count, res.watchers_count, res.created,
+      response.items.map((res: any) => {
+        allReposList = new RepositorySkeleton(res.name, res.description, res.owner.login, res.stargazers_count, res.watchers_count, res.created,
           res.forks_count, res.html_url, res.cloneURL);
         this.totalRepos.push(allReposList)
       })
+      console.log(this.allRepos);
     })
   }
+
+  
 }
 // this should retrun everything about a user
 // Should return the list of the repos of the user

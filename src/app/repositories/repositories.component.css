@@ -10,7 +10,15 @@
   top: 1vh;
 }
 .floaters{
-  width: 15%;
+  max-width: fit-content;
+  height: 15%;
+}
+.desc{
+  max-height:13vh;
+  overflow:auto;
+}
+floater{
+  max-width: fit-content;
   height: 15%;
 }
 .right{
@@ -21,4 +29,7 @@
 }
 .viewer a{
   text-decoration: none !important;
+}
+.repo-carrier{
+  border: 1px solid #0096C7;
 }

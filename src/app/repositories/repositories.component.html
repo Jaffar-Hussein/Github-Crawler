@@ -1,23 +1,21 @@
 <div class="main-container">
   <app-navigation-bar></app-navigation-bar>
-  <div class="container repos">
+  <div class="container repos" >
     <p class="h5 text-center mt-5">Repositories</p>
-    <div class="repo-carrier container bg-light p-2">
+    <div class="repo-carrier container bg-light p-2 my-2" *ngFor="let rep of repos">
       <div class="repo d-flex justify-content-between align-items-center">
         <div class="left">
-          <p class="lead">Akan Project</p>
-          <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, laudantium.
-          Sequi temporibus ea dolore inventore perferendis, officia iste quo repudiandae!
-          Quos inventore, at cupiditate omnis similique quidem illum. Dignissimos, dicta?</p>
-          <p class="text-muted">"http://github.com/Jaffar-Hussein/Github-Crawler"</p>
-          <p>By : Hanan Hussein</p>
+          <p class="lead">{{rep.name}} Project</p>
+          <p class="desc">{{rep.description}}</p>
+          <p class="text-muted">{{rep.cloneURL}}</p>
+          <p>By : {{rep.author}}</p>
           <p class="text-muted"> 4 months ago </p>
-          <p class="viewer text-decoration-underline"><a href="" class="text-decoration-none">VIEW</a></p>
+          <p class="viewer text-decoration-underline"><a href={{rep.htmlURL}} target="_black" class="link-secondary">VIEW</a></p>
         </div>
         <div class="right text-center"> 
-          <p class="floaters p-3 bg-success me-5 ">0 Forks</p>
-          <p class="floaters p-3 bg-success mx-5">0 Forks</p>
-          <p class="floaters p-3 bg-success ms-5">0 Forks</p>
+          <p class="floaters p-3 bg-success me-5 ">{{rep.forks}} Forks</p>
+          <p class="floaters p-3 bg-success mx-5">{{rep.stargazer}} Stars</p>
+          <p class="floater p-3 bg-success ms-5">{{rep.watchers}} Watchers</p>
 
         </div>
       </div>
