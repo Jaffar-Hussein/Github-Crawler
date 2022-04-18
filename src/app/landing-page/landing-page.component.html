@@ -7,7 +7,7 @@
     <div class="app-title">
       <p class="display-3 mt-5">Github Search</p>
     </div>
-    <form action="">
+    <form action="" #myForm="ngForm" >
       <div class="form-group search-space">
         <input type="text" class="form-control p-3 input-space me-5 " placeholder="search users,repos ... " name="inputData" [(ngModel)] ='inputData' >
         <button disabled>
@@ -15,7 +15,7 @@
         </button>
       </div>
       <div class="form-group d-flex justify-content-center mt-5">
-        <button (click)="userSearch()" class="btn btn-outline-success me-3 first-buttons">Users</button>
+        <button (click)="userSearch()" class="btn btn-outline-success me-3 first-buttons" [disabled]="myForm.invalid">Users</button>
         <button (click)="repoSearch()" class="btn btn-outline-success first-buttons">Repositories</button>
       </div>
     </form>
