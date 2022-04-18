@@ -53,6 +53,7 @@ export class GitInfoService {
     })
   }
   userRepoSearch(url: string) {
+    this.totalRepos.length=0;
     this.HttpProcessor.fetchApi(url).subscribe((response) => {
       console.log(response)
       let allReposList: any;
