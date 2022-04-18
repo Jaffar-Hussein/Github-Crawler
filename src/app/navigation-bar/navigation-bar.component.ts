@@ -13,6 +13,7 @@ export class NavigationBarComponent implements OnInit {
   ngOnInit(): void {
   }
   userSearch() {
+    if(true)
     this.gitinfo.userApi(`https://api.github.com/users/${this.inputData}`)
     this.router.navigate(['user'])
   }
