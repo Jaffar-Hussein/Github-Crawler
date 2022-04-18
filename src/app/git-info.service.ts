@@ -11,8 +11,8 @@ export class GitInfoService {
   userRepositories!: [any]
 
   constructor(private HttpProcessor: HttpProcessorService,) {
-    console.log('jkkjkjk',this.userSkeleton)
-    this.userSkeleton = new UserSkeleton("",0,0,0,"","",new Date(),"","","");
+    
+    this.userSkeleton = new UserSkeleton("",0,0,0,"","",new Date(),"","","","");
 
     // this.userSkeleton = new UserSkeleton("",0,0,0,"",'',)
   }
@@ -24,11 +24,12 @@ export class GitInfoService {
       this.userSkeleton.followers=response.followers;
       this.userSkeleton.publicRepositories=response.public_repos;
       this.userSkeleton.bio=response.bio;
-      this.userSkeleton.image=response.avator_url;
+      this.userSkeleton.image=response.avatar_url;
       this.userSkeleton.creationDate=response.created_at;
       this.userSkeleton.location=response.location;
       this.userSkeleton.email=response.email;
       this.userSkeleton.hireable=response.hireable;
+      this.userSkeleton.htmlURL=response.html_url;
       // this.userSkeleton = new UserSkeleton(response.login, response.following, response.followers,
       //   response.public_repos, response.bio, response.avator_url, response.created_at, response.location,
       //   response.email, response.hireable);       

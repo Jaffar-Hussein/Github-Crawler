@@ -8,27 +8,30 @@ import { UserSkeleton } from '../user-skeleton';
   styleUrls: ['./user-result-page.component.css']
 })
 export class UserResultPageComponent implements OnInit {
-  bio:string=`Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dignissimos.
+  bio: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dignissimos.
   Exercitationem voluptas atque veritatis deleniti perferendis eveniet harum ipsum magni!
   Ad eos error a nobis veniam omnis provident ipsam cumque!
   Qui ea sint, iure distinctio quia quasi cum iste quis.
   Recusandae molestias quidem ab ullam facilis deleniti! Quasi, laudantium expedita!`;
-  name!:string
-  followers:number=0;
-  following:number=0;
-  publicRepositories:number = 0;
-  user:any=[];
+  name!: string
+  followers: number = 0;
+  following: number = 0;
+  publicRepositories: number = 0;
+  htmlURL!: string;
+  user: any = [];
   users!: UserSkeleton
 
-  constructor(private gitinfo:GitInfoService) {
-  
+  constructor(private gitinfo: GitInfoService) {
+
   }
-  
+
   ngOnInit(): void {
     this.users = this.gitinfo.userSkeleton
     this.user.push(this.users)
     console.log(this.user);
-    
-  }
 
+  }
+  redirection(url: any) {
+    window.open(url,'_blank')
+  }
 }
