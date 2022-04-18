@@ -28,7 +28,7 @@
       <div class="d-flex flex-column align-items-start">
         <p class="repo-name h6"><span>{{repo.name}}</span> Project</p>
         <p>{{repo.description}}</p>
-        <p class="text-muted">{{repo.htmlURL}}</p>
+        <p class="text-muted"><a href={{repo.htmlURL}} target="_blank" class="userLink">{{repo.htmlURL}}</a></p>
         <p> Created {{repo.created_at|monthCounter}}</p>
 
       </div>
