@@ -43,3 +43,8 @@
 .search-image{
     height: 3vh;
 }
+.home{
+  height: 5vh;
+  margin-right:5vw;
+  cursor:pointer;
+}

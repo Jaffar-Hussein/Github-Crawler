@@ -6,7 +6,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { UserResultPageComponent } from './user-result-page/user-result-page.component';
 
 const routes: Routes = [
-  {path:'home',component:LandingPageComponent},
+  {path:'',component:LandingPageComponent},
   {path:'user',component:UserResultPageComponent},
   {path:'repositories',component:RepositoriesComponent},
   {path:'404',component:ErrorPageComponent},
