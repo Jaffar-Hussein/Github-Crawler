@@ -184,7 +184,7 @@
 /* Repository sections */
 .repository {
   width: 100%;
-  height: 12vh;
+  height: fit-content;
   /* background-color: whitesmoke; */
 }
 

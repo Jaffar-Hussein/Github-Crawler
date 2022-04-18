@@ -25,7 +25,8 @@ export class UserResultPageComponent implements OnInit {
   repo:any=[];
 
   constructor(private gitinfo: GitInfoService) {
-
+    console.log(this.repo);
+    
   }
 
   ngOnInit(): void {
@@ -35,7 +36,7 @@ export class UserResultPageComponent implements OnInit {
     console.log("repo", this.repo);
 
     this.user.push(this.users)
-    console.log("userrrrrrrrr",this.user.name);
+    // console.log("userrrrrrrrr",this.user.name);
 
   }
   redirection(url: any) {
