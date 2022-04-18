@@ -9,6 +9,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { MonthCounterPipe } from './month-counter.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     NavigationBarComponent,
     RepositoriesComponent,
     ErrorPageComponent,
+    MonthCounterPipe,
     
   ],
   imports: [
