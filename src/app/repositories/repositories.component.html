@@ -1,8 +1,8 @@
 <div class="main-container">
   <app-navigation-bar></app-navigation-bar>
-  <div class="container repos">
+  <div class="container repos" *ngIf="repos.length !== 0; else error" >
     <p class="h5 text-center mt-5" appUnknownSearch>Repositories</p>
-    <div *ngIf="false ; else error">
+    <div >
       <div class="repo-carrier container  p-2 my-2" *ngFor="let rep of repos">
         <div class="repo d-flex justify-content-between align-items-center">
           <div class="left">
@@ -22,16 +22,16 @@
         </div>
       </div>
     </div>
-
+  </div>
     <ng-template #error>
       <div class="container d-flex align-items-center justify-content-center">
         <div class="div">
-          <p class="h1">Sorry No Repo Found :(</p>
+          <p class="display-6">Sorry Repo Not Found :(</p>
         </div>
         <div class="div">
           <img src="../../assets/error.gif" alt="">
         </div>
       </div>
     </ng-template>
-  </div>
+  
 </div>
