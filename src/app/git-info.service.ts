@@ -20,9 +20,11 @@ export class GitInfoService {
     this.userSkeleton = new UserSkeleton("", 0, 0, 0, "", "", new Date(), "", "", "", "");
     this.userRepo = new UserRepo("", "", "", "", 0, 0, new Date(), 0, "");
     this.allRepos = new RepositorySkeleton("", "", "", 0, 0, new Date(), 0, "", "")
-    this.repos.length = 0;
+
   }
+
   userApi(url: string) {
+    this.repos.length=0
     this.HttpProcessor.fetchApi(`${url}?`).subscribe((response) => {
       // console.log(response);
       this.userSkeleton.name = response.login;
@@ -37,9 +39,12 @@ export class GitInfoService {
       this.userSkeleton.hireable = response.hireable;
       this.userSkeleton.htmlURL = response.html_url;
       // console.log(this.userSkeleton);
+
     });
+
     this.HttpProcessor.fetchApi(`${url}/repos?order=desc&sort=created&`).subscribe((response) => {
       let resp: any;
+
       response.map((res: any) => {
         resp = new UserRepo(res.name, res.description, res.homepage, res.owner.login, res.stargazers_count, res.watchers_count,
           res.created_at, res.forks_count, res.html_url);
