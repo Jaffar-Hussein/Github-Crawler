@@ -59,7 +59,7 @@ export class GitInfoService {
       let allReposList: any;
       response.items.map((res: any) => {
         allReposList = new RepositorySkeleton(res.name, res.description, res.owner.login, res.stargazers_count, res.watchers_count, res.created_at,
-          res.forks_count, res.html_url, res.cloneURL);
+          res.forks_count, res.html_url, res.homepage);
         this.totalRepos.push(allReposList)
       })
       console.log(this.allRepos);

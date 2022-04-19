@@ -34,6 +34,7 @@
   max-width: fit-content;
   height: 15%;
   background-color: #CAF0F8;
+  color: #000000;
 }
 
 .desc {
@@ -44,6 +45,7 @@
 .floater {
   max-width: fit-content;
   background-color: #CAF0F8;
+  color: #000000;
 
   height: 15%;
 }

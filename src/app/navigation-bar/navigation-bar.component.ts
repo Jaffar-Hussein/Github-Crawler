@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation-bar.component.css']
 })
 export class NavigationBarComponent implements OnInit {
-  inputData!:string;
+  inputData:string="";
   constructor(private gitinfo:GitInfoService,public router:Router) { }
 
   ngOnInit(): void {
