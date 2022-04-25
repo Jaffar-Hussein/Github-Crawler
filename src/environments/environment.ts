@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiKey:"apiKey=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"
+  apiKey:"apiKey=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",
+  apiKeys:`https://:Jaffar-Hussein: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`,
 };
 
 /*
