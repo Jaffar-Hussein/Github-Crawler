@@ -1,5 +1,8 @@
 # GithubCrawler
 
+<img width="1440" alt="Screenshot 2022-05-04 at 23 45 09" src="https://user-images.githubusercontent.com/57854451/166830935-1925057b-7642-4ebf-a82d-18e90bb6da0d.png">
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
 
 ## Development server
